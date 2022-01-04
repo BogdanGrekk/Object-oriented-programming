@@ -8,44 +8,44 @@ class ball {
 public:
     void print_val()
     {
-        cout<<"Радіус="<<r<<"\n Об'єм="<<ext<<endl;
+        cout<<"ГђГ Г¤ВіГіГ±="<<r<<"\n ГЋГЎ'ВєГ¬="<<ext<<endl;
     }
-ball(float x)//конструктор з параметрами
+ball(float x)
 {
     this->r=x;
     this->ext=(4.0/3.0)*M_PI*pow(r,3);
 }
-ball()//конструкція без параметрів
+ball()
 {
     this->r=0;
     this->ext=0;
 }
-~ball (){//деструктор
-cout << "\n Черга зруйнована.";
+~ball (){
+cout << "\n Г—ГҐГ°ГЈГ  Г§Г°ГіГ©Г­Г®ГўГ Г­Г .";
 }
 void in();
-friend float Summa(ball&eks1, ball&eks2){//об'являЄмо функцію дружньою щоб отримати доступ до функції поза класу
-float Summa;//об'явлення суми
-Summa = eks1.ext + eks2.ext;//формула суми
+friend float Summa(ball&eks1, ball&eks2){
+float Summa;
+Summa = eks1.ext + eks2.ext;
 return Summa;
 }
 };
-void ball::in(){//присвоюємо класу значення після їх введення
-    cout<<"радіус кулі - ";
+void ball::in(){
+    cout<<"Г°Г Г¤ВіГіГ± ГЄГіГ«Ві - ";
     cin>>r;
     ext=(4.0/3.0)*M_PI*pow(r,3);
 }
 int main()
 {
     setlocale(0, "Ukr");
-    ball eksemp1;//створення об'єкту класу
-    eksemp1.print_val();//викликаємо функцію класа
+    ball eksemp1;
+    eksemp1.print_val();
     ball eksemp2(9);
     eksemp2.print_val();
     eksemp1.in();
     eksemp1.print_val();
-    cout << "Сумма " << Summa(eksemp1, eksemp2)<<endl;
-    float r = pow(((3.0/4.0)*Summa(eksemp1, eksemp2)/M_PI),1.0/3.0);//формула підрахунку суми об'ємів куль
-    cout<<"перерахований радіус - "<<r<<endl;
+    cout << "Г‘ГіГ¬Г¬Г  " << Summa(eksemp1, eksemp2)<<endl;
+    float r = pow(((3.0/4.0)*Summa(eksemp1, eksemp2)/M_PI),1.0/3.0);
+    cout<<"ГЇГҐГ°ГҐГ°Г ГµГ®ГўГ Г­ГЁГ© Г°Г Г¤ВіГіГ± - "<<r<<endl;
     return 0;
 }
