@@ -9,17 +9,17 @@ class People
 {
 public:
 	string PIB;
-	int pn;/*phone number*/
-	int *db;/*date birthday*/
+	int pn;
+	int *db;
 	People()
 	{
 		PIB = "";
 		pn = 0;
 		db = NULL;
 	}
-	friend ifstream& operator >>(ifstream& t, People& s);/*reading from file*/
-	friend ostream& operator <<(ostream& t, People& s); /*output to the screen*/
-	friend ofstream& operator <<(ofstream& t, People& s); /*output to the file*/
+	friend ifstream& operator >>(ifstream& t, People& s);
+	friend ostream& operator <<(ostream& t, People& s); 
+	friend ofstream& operator <<(ofstream& t, People& s);
 };
 ifstream& operator >>(ifstream& t, People& s)
 {
