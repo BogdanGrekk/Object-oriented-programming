@@ -32,14 +32,14 @@ phys=physics;
 tech=technology;
 }
 void Pr(){
-cout<<surname<<"\n"<<name<<"ìàº \t"<<math<<","<<phys<<","<<tech<<endl;
+cout<<surname<<"\n"<<name<<"Ã¬Ã Âº \t"<<math<<","<<phys<<","<<tech<<endl;
 }
 };
 int main(){
     setlocale(0, "Ukr");
 ifstream fin("data.txt");
 if(!fin){
-    cout<<"Ïîìèëêà"<<endl;
+    cout<<"ÐŸÐ¾Ð¼Ð¸Ð»ÐºÐ°"<<endl;
     _getch();
 return 0;
 }
@@ -47,7 +47,7 @@ int number,i,j,g,calculator=0;
 fin>>number;
 Pupil* s=new Pupil[number];
 int sub;
-cout<<"Îáåð³òü ïðåäìåò( Ìàòåìàòèêà - 1, Ô³çèêà - 2, ²íôîðìàòèêà - 3) -"<<endl;
+cout<<"ÐžÐ±ÐµÑ€Ñ–Ñ‚ÑŒ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚( ÐœÐ°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ° - 1, Ð¤Ñ–Ð·Ð¸ÐºÐ° - 2, Ð†Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ð¸ÐºÐ° - 3) -"<<endl;
 cin>>sub;
 switch(sub){
 case 1:
@@ -103,7 +103,7 @@ case 3:
     break;
 default:
     system("cls");
-    cout<<"Ñïðîáóéòå çíîâó"<<endl;
+    cout<<"Ã‘Ã¯Ã°Ã®Ã¡Ã³Ã©Ã²Ã¥ Ã§Ã­Ã®Ã¢Ã³"<<endl;
     _getch();
     break;
 }
@@ -122,7 +122,7 @@ for(i=0;i<calculator-1;i++){
         }
     }
 }
-cout<<"\n Ïðåäìåò"<<"math"<<"phys"<<"tech"<<endl;
+cout<<"\n ÃÃ°Ã¥Ã¤Ã¬Ã¥Ã²"<<"math"<<"phys"<<"tech"<<endl;
 for(int i=0;i<calculator;i++)
     s[i].Pr();
     _getch();
