@@ -3,15 +3,15 @@
 #include <cmath>
 #include <math.h>
 using namespace std;
-class research{//оголошення класу і об'єкту класу
+class research{
 int*a;
 int siz=0, i=0, calc=0, SUM=0;
 public:
     research(int siz)
     {
-    a=new int[i];//створення нового об'єкта
-   cout<<"Масив:\n";
-   for (i=1;i<=siz;i++){//обчислення елементів масиву
+    a=new int[i];
+   cout<<"ГЊГ Г±ГЁГў:\n";
+   for (i=1;i<=siz;i++){
     if(i%2==0){
         a[i]=i+3;
     }
@@ -20,31 +20,31 @@ public:
     }
     cout<<"[" <<a[i]<<"]"<<endl;
    }
-   for(i=1;i<siz;i++){//виконання вказівок до обробки(Знайти суму кожного третього елемента)
+   for(i=1;i<siz;i++){
     if(i%3==0){
         calc++;
         SUM=SUM+a[i];
     }
    }
-   cout<<calc<<"-кiлькiсть\n";
-   cout<<SUM<<"-сумма";
+   cout<<calc<<"-ГЄiГ«ГјГЄiГ±ГІГј\n";
+   cout<<SUM<<"-Г±ГіГ¬Г¬Г ";
     }
-~research(){//деструктор
-delete[] a;//видалення динамічного масива
-cout<<"\n Виносимо смiття";
+~research(){
+delete[] a;
+cout<<"\n Г‚ГЁГ­Г®Г±ГЁГ¬Г® Г±Г¬iГІГІГї";
 }
-research(const research& Research){//об'явлення конструктора копії
-    siz = Research.siz;//передаємо siz значення Research
-    a = new int[siz];//створення нового об'єкта
-    for(int i=0;i<siz;i++)//копіюємо значення в новий об'єкт
+research(const research& Research){
+    siz = Research.siz;
+    a = new int[siz];
+    for(int i=0;i<siz;i++)
         a[i]= Research.a[i];
-    cout<<"\n Копiя конструктора викликана"<<endl;
+    cout<<"\n ГЉГ®ГЇiГї ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г  ГўГЁГЄГ«ГЁГЄГ Г­Г "<<endl;
 }
 };
 int main()
 {
 setlocale(0, "Ukr");
-research Research(11);//задаємо кількість елментів масиву
-research res=Research;//створюємо копію об'єкта research
+research Research(11);
+research res=Research;
 return 0;
 }
