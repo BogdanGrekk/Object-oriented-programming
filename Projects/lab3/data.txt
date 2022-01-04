@@ -1,0 +1,7 @@
+5
+
+Stepanets Grigor 4 1 4
+Krapovets Anatol  5 3 5
+Hinkovets Freddy 1 3 5
+Forkeskii Andrii 3 4 5
+Rigorekov Stepan 5 5 1
