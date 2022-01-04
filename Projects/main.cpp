@@ -45,7 +45,7 @@ int main()
     eksemp1.in();
     eksemp1.print_val();
     cout << "Ñóììà " << Summa(eksemp1, eksemp2)<<endl;
-    float r = pow(((3.0/4.0)*Summa(eksemp1, eksemp2)/M_PI),1.0/3.0);//ôîðìóëà ï³äðàõóíêó ñóìè îá'ºì³â êóëü
+    float r = pow(((3.0/4.0)*Summa(eksemp1, eksemp2)/M_PI),1.0/3.0);
     cout<<"ïåðåðàõîâàíèé ðàä³óñ - "<<r<<endl;
     return 0;
 }
